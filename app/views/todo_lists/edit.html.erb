@@ -1,0 +1,8 @@
+<h2>Edit TodoList</h2>
+<%= simple_form_for @todo_list do |f| %>
+
+<%= f.input :title %>
+<%= f.input :description %>
+
+<%= f.submit "Submit", data: { disable_with: "Submiting"} %>
+<% end %>
