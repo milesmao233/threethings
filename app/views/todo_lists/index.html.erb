@@ -1,5 +1,8 @@
 <% @todo_lists.each do |todo_list| %>
 
-<%= todo_list.title %>
+<%= link_to todo_list.title, todo_list_path(todo_list) %>
 <%= todo_list.description %>
+
 <% end %>
+
+<%= link_to "New todo_list", new_todo_list_path %>
