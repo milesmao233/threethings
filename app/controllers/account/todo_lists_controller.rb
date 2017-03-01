@@ -3,19 +3,17 @@ class Account::TodoListsController < ApplicationController
   before_action :set_todo_list, only:[:show, :edit, :update, :destroy]
 
   def index
-    @todo_lists = TodoList.all
+    @todo_lists = current_user.todo_lists.all
   end
 
   def show
     @todo_items = @todo_list.todo_items
   end
 
-  def new
-    @todo_list = TodoList.new
-  end
+
 
   def create
-    @todo_list = TodoList.new(todo_list_params)
+    @todo_list = TodoList.create(todo_list_params)
     @todo_list.user = current_user
 
     if @todo_list.save
