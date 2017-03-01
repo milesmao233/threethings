@@ -1,4 +1,4 @@
-<%= form_for([@todo_list, @todo_items.build]) do |f| %>
+<%= form_for [:account, @todo_list, @todo_items.build] do |f| %>
   <%= f.text_field :title, placeholder: "New Tod" %>
   <%= f.submit %>
 <% end %>

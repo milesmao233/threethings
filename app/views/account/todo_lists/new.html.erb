@@ -1,5 +1,5 @@
 <h2>New TodoList</h2>
-<%= simple_form_for @todo_list do |f| %>
+<%= simple_form_for [:account, @todo_list] do |f| %>
 
 <%= f.input :title %>
 <%= f.input :description %>

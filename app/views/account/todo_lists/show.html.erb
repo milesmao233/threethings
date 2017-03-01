@@ -1,0 +1,21 @@
+<h2 class="todo_list_title">
+  <%= @todo_list.title %>
+</h2>
+<p>
+    <div class="todo_list_sub_title">
+        <%= @todo_list.description %>
+    </div>
+</p>
+
+<div class="todo_item">
+    <%= render @todo_list.todo_items %>
+    <div class="forms">
+        <%= render 'account/todo_items/form' %>
+    </div>
+</div>
+
+<div class="links">
+    <%= link_to "Edit", edit_account_todo_list_path(@todo_list) %>|
+    <%= link_to "Delete", account_todo_list_path(@todo_list), method: :delete %>|
+    <%= link_to "Back", account_todo_lists_path %>
+</div>
