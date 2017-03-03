@@ -3,7 +3,7 @@ class Account::TodoListsController < ApplicationController
   before_action :set_todo_list, only:[:show, :edit, :update, :destroy]
 
   def index
-    @todo_lists = current_user.todo_lists.all
+    @todo_lists = current_user.todo_lists.order("created_at DESC")
   end
 
   def show
@@ -36,7 +36,7 @@ class Account::TodoListsController < ApplicationController
 
   def destroy
     @todo_list.destroy
-    redirect_to root_path
+    redirect_to account_todo_lists_path
   end
 
   private
