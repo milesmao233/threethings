@@ -1,24 +1,27 @@
-<div class="container">
-  <h2 class="todo_list_title">
-    <%= @todo_list.title %>
-  </h2>
-  <p>
-      <div class="todo_list_sub_title">
-          <%= @todo_list.description %>
-      </div>
-  </p>
+<div class="container todo_list_show">
+  <div class="todo_list_show_detail">
+    <h2 class="todo_list_title">
+      <%= @todo_list.title %>
+    </h2>
+
+        <div class="todo_list_sub_title">
+            <p>  <%= @todo_list.description %>    </p>
+        </div>
 
 
-  <div id="todo_items_wrapper">
-      <%= render @todo_list.todo_items %>
-      <div id="form">
-        <%= render 'account/todo_items/form' %>
-      </div>
+
+    <div id="todo_items_wrapper">
+        <%= render @todo_list.todo_items %>
+        <div id="form">
+          <%= render 'account/todo_items/form' %>
+        </div>
+    </div>
+
+    <div class="links">
+        <%= link_to "Edit", edit_account_todo_list_path(@todo_list) %>|
+        <%= link_to "Delete", account_todo_list_path(@todo_list), method: :delete %>|
+        <%= link_to "Back", account_todo_lists_path %>
+    </div>
   </div>
 
-  <div class="links">
-      <%= link_to "Edit", edit_account_todo_list_path(@todo_list) %>|
-      <%= link_to "Delete", account_todo_list_path(@todo_list), method: :delete %>|
-      <%= link_to "Back", account_todo_lists_path %>
-  </div>
 </div>

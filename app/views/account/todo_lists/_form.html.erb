@@ -5,12 +5,12 @@
 
 <%= form_for [:account, @todo_lists.build] do |f| %>
 
-<%= f.text_field :title, placeholder: "输入标题：如日期" %>
+<%= f.text_field :title, placeholder: "输入标题：如日期：3月1日" %>
 <br>
 <%= f.text_field :description, placeholder: "输入简述：如 每日三件事1/100" %>
 </div>
 
 <div class="panel-footer">
-  <%= f.submit "Submit", data: { disable_with: "Submiting"} %>
+  <%= f.submit "提交", data: { disable_with: "提交中..."} %>
 </div>
 <% end %>
