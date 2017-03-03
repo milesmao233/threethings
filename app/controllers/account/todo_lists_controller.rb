@@ -3,7 +3,7 @@ class Account::TodoListsController < ApplicationController
   before_action :set_todo_list, only:[:show, :edit, :update, :destroy]
 
   def index
-    @todo_lists = current_user.todo_lists.order("created_at DESC")
+    @todo_lists = current_user.todo_lists.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
 
   def show
