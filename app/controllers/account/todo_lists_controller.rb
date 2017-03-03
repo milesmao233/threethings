@@ -10,8 +10,6 @@ class Account::TodoListsController < ApplicationController
     @todo_items = @todo_list.todo_items
   end
 
-
-
   def create
     @todo_list = TodoList.create(todo_list_params)
     @todo_list.user = current_user
