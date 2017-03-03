@@ -1,16 +1,15 @@
-<div class="panel-heading">
+
   <p>快速创建计划</p>
-</div>
-<div class="panel-body">
 
 <%= form_for [:account, @todo_lists.build] do |f| %>
-
-<%= f.text_field :title, placeholder: "输入标题：如日期：3月1日" %>
-<br>
-<%= f.text_field :description, placeholder: "输入简述：如 每日三件事1/100" %>
+<div class="group">
+  <%= f.text_field :title, placeholder: "输入标题：如日期：3月1日" %>
+  <br>
+  <%= f.text_field :description, placeholder: "输入简述：如 每日三件事1/100" %>
 </div>
 
-<div class="panel-footer">
-  <%= f.submit "提交" %>
+
+<div class="submit">
+    <%= f.submit "提交" %>
 </div>
 <% end %>

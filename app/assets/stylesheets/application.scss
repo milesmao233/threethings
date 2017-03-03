@@ -37,56 +37,52 @@ body {
 
 .todo_list_form {
     #form {
-        .panel-heading {
+        p {
             text-align: center;
-
-            p {
-                line-height: 51px;
-                margin-bottom: 0;
-                color: #337AB7;
-                font-size: 1.2em;
-                font-family: 'Lato', sans-serif;
-            }
+            line-height: 51px;
+            margin-bottom: 0;
+            color: #337AB7;
+            font-size: 1.2em;
+            font-family: 'Lato', sans-serif;
         }
 
-        .panel-body {
-            input[type="text"] {
-                display: block;
-                width: 100%;
-                height: 34px;
-                padding: 6px 12px;
-                font-size: 14px;
-                line-height: 34px;
-                color: #555555;
-                background-color: #fff;
-                background-image: none;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-                box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-                -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-                -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-                transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        input[type="text"] {
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 34px;
+            color: #555555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+            -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 
-                &:focus {
-                    outline: none;
-                    border-color: #9ecaed;
-                    box-shadow: 0 0 10px #9ecaed;
-                }
+            &:focus {
+                outline: none;
+                border-color: #9ecaed;
+                box-shadow: 0 0 10px #9ecaed;
             }
         }
-
-        .panel-footer {
-            text-align: right;
-
-            input[type="submit"] {
-                background-color: #4285f4;
-                border-color: transparent;
-                padding: 4px 20px;
-                border-radius: 4px;
-                color: white;
-            }
+        .submit {
+          text-align: center;
+          margin: 20px;
+          input[type="submit"] {
+              background-color: #4285f4;
+              border-color: transparent;
+              padding: 4px 20px;
+              border-radius: 4px;
+              color: white;
+          }
         }
+
+
     }
 }
 
@@ -136,109 +132,109 @@ body {
             }
         }
     }
-  }
-    /* 以上为todo_list index 页面 */
-    /* 以下为todo_list show 的页面*/
-    .todo_list_show {
-        width: 60%;
-        margin: 40px auto;
+}
+/* 以上为todo_list index 页面 */
+/* 以下为todo_list show 的页面*/
+.todo_list_show {
+    width: 60%;
+    margin: 40px auto;
 
-        .todo_list_show_detail {
-            width: 100%;
-            /* max-width: 750px; */
-            background: rgba(250, 250, 250, 0.3);
-            /* margin: 3em auto 0 auto; */
-            border-radius: 4px;
-            box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
-            padding: 1em 0;
+    .todo_list_show_detail {
+        width: 100%;
+        /* max-width: 750px; */
+        background: rgba(250, 250, 250, 0.3);
+        /* margin: 3em auto 0 auto; */
+        border-radius: 4px;
+        box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+        padding: 1em 0;
 
-            h2 {
+        h2 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 2em;
+            text-align: center;
+            margin: 20px 200px 0;
+            display: block;
+            text-decoration: none;
+            padding: 10px;
+            border-bottom: 1px solid #e5e5e5;
+            color: #337AB7;
+        }
+
+        .todo_list_sub_title {
+            margin: 0 200px 20px;
+            padding: 20px;
+
+            p {
+                font-size: 1.2em;
                 font-family: 'Lato', sans-serif;
-                font-weight: 400;
-                font-size: 2em;
-                text-align: center;
-                margin: 20px 200px 0;
                 display: block;
-                text-decoration: none;
-                padding: 10px;
-                border-bottom: 1px solid #e5e5e5;
-                color: #337AB7;
-            }
-
-            .todo_list_sub_title {
-                margin: 0 200px 20px;
-                padding: 20px;
-
-                p {
-                    font-size: 1.2em;
-                    font-family: 'Lato', sans-serif;
-                    display: block;
-                    margin-top: 40px;
-                    text-align: center;
-                    font-family: 'Lato', sans-serif;
-                }
-            }
-
-            #todo_items_wrapper {
-                border-top: 1px solid #e5e5e5;
-                margin: 20px auto;
-                padding: 30px 0;
-                width: 80%;
-                border-bottom: 1px solid #E5E5E5;
-                padding-bottom: 10px;
-
-                .complete {
-                    width: 20%;
-                    float: left;
-                    text-align: center;
-                }
-
-                .todo_item {
-                    width: 60%;
-                    float: left;
-                    text-align: center;
-                }
-
-                .trash {
-                    width: 20%;
-                    float: right;
-                    text-align: center;
-                }
-
-                #form {
-                    margin-top: 60px;
-                    text-align: center;
-
-                    input[type="text"] {
-                        padding-left: 20px;
-                        width: 100%;
-                        height: 40px;
-                        border-radius: 4px;
-                        border: 1px solid #ccc;
-                        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-                        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-
-                        &:focus {
-                            outline: none;
-                            border-color: #9ecaed;
-                            box-shadow: 0 0 10px #9ecaed;
-                        }
-                    }
-
-                    input[type="submit"] {
-                        margin: 20px;
-                        background-color: #337AB7;
-                        border-color: transparent;
-                        padding: 4px 20px;
-                        border-radius: 4px;
-                        color: #F3F3F3;
-                    }
-                }
-            }
-
-            .links {
+                margin-top: 40px;
                 text-align: center;
-                font-size: 1.1em;
+                font-family: 'Lato', sans-serif;
             }
         }
+
+        #todo_items_wrapper {
+            border-top: 1px solid #e5e5e5;
+            margin: 20px auto;
+            padding: 30px 0;
+            width: 80%;
+            border-bottom: 1px solid #E5E5E5;
+            padding-bottom: 10px;
+
+            .complete {
+                width: 20%;
+                float: left;
+                text-align: center;
+            }
+
+            .todo_item {
+                width: 60%;
+                float: left;
+                text-align: center;
+            }
+
+            .trash {
+                width: 20%;
+                float: right;
+                text-align: center;
+            }
+
+            #form {
+                margin-top: 60px;
+                text-align: center;
+
+                input[type="text"] {
+                    padding-left: 20px;
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 4px;
+                    border: 1px solid #ccc;
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+                    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+                    &:focus {
+                        outline: none;
+                        border-color: #9ecaed;
+                        box-shadow: 0 0 10px #9ecaed;
+                    }
+                }
+
+                input[type="submit"] {
+                    margin: 20px;
+                    background-color: #337AB7;
+                    border-color: transparent;
+                    padding: 4px 20px;
+                    border-radius: 4px;
+                    color: #F3F3F3;
+                }
+            }
+        }
+
+        .links {
+            text-align: center;
+            font-size: 1.1em;
+        }
     }
+}
