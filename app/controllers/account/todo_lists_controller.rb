@@ -17,7 +17,7 @@ class Account::TodoListsController < ApplicationController
     if @todo_list.save
       redirect_to account_todo_list_path(@todo_list)
     else
-      render :new
+      redirect_to account_todo_lists_path, alert: "你需要填入内容"
     end
   end
 

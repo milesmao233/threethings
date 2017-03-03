@@ -5,4 +5,6 @@ class TodoItem < ApplicationRecord
   def completed?
     !completed_at.blank?
   end
+
+  validates :title, presence: true
 end

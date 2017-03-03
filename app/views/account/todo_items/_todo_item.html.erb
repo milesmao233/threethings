@@ -11,7 +11,7 @@
         </p>
     </div>
     <div class="trash">
-        <%= link_to account_todo_list_todo_item_path(@todo_list, todo_item), method: :delete do %>
+        <%= link_to account_todo_list_todo_item_path(@todo_list, todo_item), method: :delete, :data => { confirm: "你确定删除吗？"} do %>
         <i class="fa fa-trash" style="opacity: 0.7"></i>
         <% end %>
     </div>
@@ -28,7 +28,7 @@
         </p>
     </div>
     <div class="trash">
-        <%= link_to account_todo_list_todo_item_path(@todo_list, todo_item), method: :delete do %>
+        <%= link_to account_todo_list_todo_item_path(@todo_list, todo_item), method: :delete, :data => { confirm: "你确定删除吗？"} do %>
         <i class="fa fa-trash"></i>
         <% end %>
     </div>

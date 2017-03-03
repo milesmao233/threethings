@@ -8,6 +8,9 @@ class Account::TodoItemsController < ApplicationController
 
         if @todo_item.save
         redirect_to account_todo_list_path(@todo_list)
+      else
+        redirect_to account_todo_list_path(@todo_list), alert: "你需要填入计划"
+
       end
     end
 
