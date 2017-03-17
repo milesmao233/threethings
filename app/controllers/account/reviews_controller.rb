@@ -1,4 +1,5 @@
 class Account::ReviewsController < ApplicationController
+  before_action :authenticate_user!
 
   def create
     @todo_list = TodoList.find(params[:todo_list_id])
