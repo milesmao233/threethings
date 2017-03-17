@@ -17,6 +17,13 @@
         </div>
     </div>
 
+    <div id="reviews_wrapper">
+        <%= render @todo_list.reviews %>
+        <div id="form">
+          <%= render 'account/reviews/form' %>
+        </div>
+    </div>
+
     <div class="links">
         <%= link_to "Edit", edit_account_todo_list_path(@todo_list) %>|
         <%= link_to "Delete", account_todo_list_path(@todo_list), method: :delete %>|

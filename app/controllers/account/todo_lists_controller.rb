@@ -8,6 +8,7 @@ class Account::TodoListsController < ApplicationController
 
   def show
     @todo_items = @todo_list.todo_items
+    @reviews = @todo_list.reviews
   end
 
   def create

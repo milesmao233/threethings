@@ -9,6 +9,7 @@ Rails.application.routes.draw do
                     put :cancel
                 end
             end
+            resources :reviews
         end
     end
 

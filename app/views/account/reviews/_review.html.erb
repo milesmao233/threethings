@@ -1,0 +1,9 @@
+<div class="review_content">
+<p><%= review.content %></p>
+</div>
+
+<div class="trash">
+    <%= link_to account_todo_list_review_path(@todo_list, review), method: :delete, :data => { confirm: "你确定删除吗？"} do %>
+    <i class="fa fa-trash"></i>
+    <% end %>
+</div>
